@@ -46,7 +46,7 @@
             </header>
             <div mx-auto max-w-lg w-full space-y-5 px-2>
                 <div rounded-lg class="bg-white/10" p-10 w-full mx-auto shadow-lg relative>
-                    <h1 duration-200 font-bold text-3xl absolute class="left-1/2 -translate-1/2 text-gray-200/80" mt-5 :class="[isRunning ? 'opacity-100 visible' : 'opacity-0 invisible']">
+                    <h1 duration-200 font-bold text-2xl md:text-3xl absolute class="left-1/2 -translate-1/2 text-gray-200/80" mt-5 :class="[isRunning ? 'opacity-100 visible' : 'opacity-0 invisible']">
                         {{ ['Pomodoro', 'Short Break', 'Long Break'][activeTab] }}
                     </h1>
                     <TabGroup :selected-index="activeTab">
@@ -82,14 +82,14 @@
                             </TabPanel>
                             <TabPanel>
                                 <AppTimer :time="store.shortBreak" :auto-start-breaks="store.autoStartBreaks" @end="onTimerEnd('short-break')" @started="started">
-                                    <button text-4xl text-white absolute right-9 @click="onTimerEnd('short-break')">
+                                    <button text-3xl md:text-4xl text-white absolute right-2 md:right-9 @click="onTimerEnd('short-break')">
                                         <font-awesome-icon icon="fa-solid fa-forward-step" text-white />
                                     </button>
                                 </AppTimer>
                             </TabPanel>
                             <TabPanel>
                                 <AppTimer :time="store.longBreak" :auto-start-breaks="store.autoStartBreaks" @end="onTimerEnd('long-break')" @started="started">
-                                    <button text-4xl text-white absolute right-9 @click="onTimerEnd('long-break')">
+                                    <button text-3xl md:text-4xl text-white absolute right-2 md:right-9 @click="onTimerEnd('long-break')">
                                         <font-awesome-icon icon="fa-solid fa-forward-step" text-white />
                                     </button>
                                 </AppTimer>

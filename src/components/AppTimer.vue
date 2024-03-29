@@ -67,13 +67,13 @@
         <div md:text-9xl text-8xl text-center>
             {{ minutes }}:{{ seconds }}
         </div>
-        <div>
+        <div w-full>
             <div v-if="!isRunning">
                 <button px-10 py-2 rounded bg-white text-current uppercase class="startBtn" @click="start">
                     Start
                 </button>
             </div>
-            <div v-else flex items-center space-x-5 justify-center relative>
+            <div v-else w-full flex items-center space-x-5 justify-center relative>
                 <button px-10 py-2 rounded bg-white uppercase relative class="pauseBtn" @click="stop">
                     Pause
                 </button>
