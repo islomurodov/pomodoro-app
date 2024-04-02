@@ -1,5 +1,6 @@
 <script setup lang="ts">
     import { ref } from "vue";
+    import kitchenTimer from "~/assets/sounds/kitchen-timer.mp3";
 
     const props = defineProps<{
         time: number
@@ -49,6 +50,7 @@
     }
 
     function onTimeElapsed() {
+        new Audio(kitchenTimer).play();
         stop();
         emit("end");
     }

@@ -16,10 +16,6 @@
         "up": "taze major -I"
     },
     "dependencies": {
-        "@formkit/auto-animate": "^1.0.0-beta.6",
-        "@fortawesome/fontawesome-svg-core": "^6.4.0",
-        "@fortawesome/free-solid-svg-icons": "^6.4.0",
-        "@fortawesome/vue-fontawesome": "^3.0.3",
         "@headlessui/vue": "^1.7.13",
         "@unocss/reset": "^0.49.0",
         "@vueuse/core": "^9.11.1",

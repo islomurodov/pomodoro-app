@@ -28,10 +28,10 @@
     <div flex items-center justify-center>
         <button
             type="button"
-            rounded class="bg-gray-600/50" aria-label="settings" title="settings" bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75
+            rounded class="bg-gray-600/50" aria-label="settings" title="settings" bg-opacity-20 px-4 flex items-center gap-2 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75
             @click="openModal"
         >
-            <font-awesome-icon icon="fa-solid fa-gear" /> <span sm:inline-block hidden>Settings</span>
+            <div i-carbon-settings inline-block /> <span sm:inline-block hidden>Settings</span>
         </button>
     </div>
     <TransitionRoot appear :show="isOpen" as="template">
@@ -59,12 +59,12 @@
                                 </DialogTitle>
 
                                 <button type="button" font-bold text-black text-2xl @click="closeModal">
-                                    <font-awesome-icon icon="fa-solid fa-xmark" />
+                                    <div i-carbon-close />
                                 </button>
                             </div>
                             <div space-y-4>
-                                <div text-base text-gray-400 font-bold uppercase mt-7>
-                                    <font-awesome-icon icon="fa-solid fa-clock" /> Timer
+                                <div text-base flex items-center gap-1 text-gray-400 font-bold uppercase mt-7>
+                                    <div i-carbon-time inline-block /> Timer
                                 </div>
                                 <div space-y-2>
                                     <div>
